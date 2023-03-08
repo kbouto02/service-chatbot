@@ -1,5 +1,5 @@
 # Custom extension for IBM Watson Assistant which provides a
-# REST API around a single database table (COVERAGES).
+# REST API around a single database table (SERVICECOVERAGES).
 #
 # The code demonstrates how a simple REST API can be developed and
 # then deployed as serverless app to IBM Cloud Code Engine.
@@ -20,7 +20,7 @@ from apiflask.validators import Length, Range
 from flask_sqlalchemy import SQLAlchemy
 
 # Set how this API should be titled and the current version
-API_TITLE='Coverages API for Watson Assistant'
+API_TITLE='Service Coverages API for Watson Assistant'
 API_VERSION='1.0.0'
 
 # create the app
@@ -152,36 +152,36 @@ sample_coverages=[
 ]
 
 
-# Schema for table “COVERAGES"
-# Set default schema to "COVERAGES"
+# Schema for table “SERVICECOVERAGES"
+# Set default schema to "SERVICECOVERAGES"
 class CoverageModel(db.Model):
     __tablename__ = 'COVERAGES'
     __table_args__ = TABLE_ARGS
     cid = db.Column('CID',db.Integer, primary_key=True)
     shortname = db.Column('PARTNAME',db.String(255))
-    ceid = db.Column('CEID',db.String(255))
-    motion = db.Column('MOTION',db.String(255))
-    ptsauto = db.Column('PTSAUTO',db.String(255))
-    ptsda = db.Column('PTSDA',db.String(255))
-    mgrdaat = db.Column('DAATECHMGR',db.String(255))
-    bpspubcloud = db.Column('BPSPUBCLOUD',db.String(255))
-    vadptspow = db.Column('PTSVADPOW',db.String(255))
-    vadptsstor = db.Column('PTSVADSTOR',db.String(255))
-    vadptssw = db.Column('PTSVADSW',db.String(255))
+    gbg = db.Column('GBG',db.String(255))
     crosstps = db.Column('CROSSTPS',db.String(255))
+    crosssps = db.Column('CROSSSPS',db.String(255))
+    bpsz = db.Column('BPSZ',db.String(255))
     bpspow = db.Column('BPSPOW',db.String(255))
     bpsstor = db.Column('BPSSTOR',db.String(255))
-    bpsz = db.Column('BPSZ',db.String(255))
-    bpsda = db.Column('BPSDA',db.String(255))
     bpsauto = db.Column('BPSAUTO',db.String(255))
+    bpsda = db.Column('BPSDA',db.String(255))
     bpssec = db.Column('BPSSEC',db.String(255))
     bpssus = db.Column('BPSSUS',db.String(255))
-    ptspow = db.Column('PTSPOW',db.String(255))
-    ptsstor = db.Column('PTSSTOR',db.String(255))
-    ptsz = db.Column('PTSZ',db.String(255))
+    igf = db.Column('IGF',db.String(255))
+    crosspts = db.Column('CROSSPTS',db.String(255))
+    ptsda = db.Column('PTSDA',db.String(255))
+    ptsauto = db.Column('PTSAUTO',db.String(255))
     ptssec = db.Column('PTSSEC',db.String(255))
     ptssus = db.Column('PTSSUS',db.String(255))
-    ibmfin = db.Column('IBMFIN',db.String(255))
+    ptsz = db.Column('PTSZ',db.String(255))
+    ptspow = db.Column('PTSPOW',db.String(255))
+    ptsstor = db.Column('PTSSTOR',db.String(255))
+    ptscloudplat = db.Column('PTSCLOUDPLAT',db.String(255))
+    zsw = db.Column('ZSW',db.String(255))
+    csm = db.Column('CSM',db.String(255))
+    silablead = db.Column('SILABLEAD',db.String(255))
 
 
 # the Python output for Coverages
