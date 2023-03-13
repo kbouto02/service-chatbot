@@ -1,6 +1,6 @@
 {
   "info": {
-    "title": "Coverages API for Watson Assistant",
+    "title": "Service Coverages API for Watson Assistant",
     "version": "1.0.0"
   },
   "tags": [],
@@ -150,7 +150,7 @@
           }
         },
         "summary": "Insert a new coverage record",
-        "description": "Insert a new coverage record with the given attributes. Its new CEID is returned.",
+        "description": "Insert a new coverage record with the given attributes. Its new GBG is returned.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -219,12 +219,12 @@
         ]
       }
     },
-    "/coverages/ceid/{ceid}": {
+    "/coverages/gbg/{gbg}": {
       "get": {
         "parameters": [
           {
             "in": "path",
-            "name": "ceid",
+            "name": "gbg",
             "schema": {
               "type": "string"
             },
@@ -263,8 +263,8 @@
             "description": "Not found"
           }
         },
-        "summary": "Coverage record by CEID",
-        "description": "Retrieve a single coverage record by its CEID",
+        "summary": "Coverage record by GBG",
+        "description": "Retrieve a single coverage record by its GBG",
         "security": [
           {
             "ApiKeyAuth": []
@@ -275,7 +275,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "ceid",
+            "name": "gbg",
             "schema": {
               "type": "string"
             },
@@ -307,8 +307,8 @@
             "description": "Not found"
           }
         },
-        "summary": "Delete an coverage record by CEID",
-        "description": "Delete a single coverage record identified by its CEID.",
+        "summary": "Delete a coverage record by GBG",
+        "description": "Delete a single coverage record identified by its GBG.",
         "security": [
           {
             "ApiKeyAuth": []
@@ -448,37 +448,19 @@
       "CoverageOut": {
         "type": "object",
         "properties": {
-          "motion": {
-            "type": "string"
-          },
-          "ptsauto": {
-            "type": "string"
-          },
-          "ptsda": {
-            "type": "string"
-          },
           "shortname": {
             "type": "string"
           },
-          "ceid": {
-            "type": "string"
-          },
-          "mgrdaat": {
-            "type": "string"
-          },
-          "bpspubcloud": {
-            "type": "string"
-          },
-          "vadptspow": {
-            "type": "string"
-          },
-          "vadptsstor": {
-            "type": "string"
-          },
-          "vadptssw": {
+          "gbg": {
             "type": "string"
           },
           "crosstps": {
+            "type": "string"
+          },
+          "crosssps": {
+            "type": "string"
+          },
+          "bpsz": {
             "type": "string"
           },
           "bpspow": {
@@ -487,13 +469,10 @@
           "bpsstor": {
             "type": "string"
           },
-          "bpsz": {
+          "bpsauto": {
             "type": "string"
           },
           "bpsda": {
-            "type": "string"
-          },
-          "bpsauto": {
             "type": "string"
           },
           "bpssec": {
@@ -502,13 +481,16 @@
           "bpssus": {
             "type": "string"
           },
-          "ptspow": {
+          "igf": {
             "type": "string"
           },
-          "ptsstor": {
+          "crosspts": {
             "type": "string"
           },
-          "ptsz": {
+          "ptsda": {
+            "type": "string"
+          },
+          "ptsauto": {
             "type": "string"
           },
           "ptssec": {
@@ -517,7 +499,25 @@
           "ptssus": {
             "type": "string"
           },
-          "ibmfin": {
+          "ptsz": {
+            "type": "string"
+          },
+          "ptspow": {
+            "type": "string"
+          },
+          "ptsstor": {
+            "type": "string"
+          },
+          "ptscloudplat": {
+            "type": "string"
+          },
+          "zsw": {
+            "type": "string"
+          },
+          "csm": {
+            "type": "string"
+          },
+          "silablead": {
             "type": "string"
           }
         }
@@ -539,52 +539,27 @@
       "CoverageIn": {
         "type": "object",
         "properties": {
-          "motion": {
-            "type": "string",
-            "minLength": 0,
-            "maxLength": 255
-          },
-          "ptsauto": {
-            "type": "string",
-            "minLength": 0,
-            "maxLength": 255
-          },
-          "ptsda": {
-            "type": "string",
-            "minLength": 0,
-            "maxLength": 255
-          },
           "shortname": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           },
-          "mgrdaat": {
-            "type": "string",
-            "minLength": 0,
-            "maxLength": 255
-          },
-          "bpspubcloud": {
-            "type": "string",
-            "minLength": 0,
-            "maxLength": 255
-          },
-          "vadptspow": {
-            "type": "string",
-            "minLength": 0,
-            "maxLength": 255
-          },
-          "vadptsstor": {
-            "type": "string",
-            "minLength": 0,
-            "maxLength": 255
-          },
-          "vadptssw": {
+          "gbg": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           },
           "crosstps": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "crosssps": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "bpsz": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
@@ -599,17 +574,12 @@
             "minLength": 0,
             "maxLength": 255
           },
-          "bpsz": {
+          "bpsauto": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           },
           "bpsda": {
-            "type": "string",
-            "minLength": 0,
-            "maxLength": 255
-          },
-          "bpsauto": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
@@ -624,17 +594,22 @@
             "minLength": 0,
             "maxLength": 255
           },
-          "ptspow": {
+          "igf": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           },
-          "ptsstor": {
+          "crosspts": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           },
-          "ptsz": {
+          "ptsda": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "ptsauto": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
@@ -649,24 +624,45 @@
             "minLength": 0,
             "maxLength": 255
           },
-          "ibmfin": {
+          "ptsz": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           },
-          "ceid": {
+          "ptspow": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "ptsstor": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "ptscloudplat": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "zsw": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "csm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "silablead": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           }
         },
         "required": [
-          "motion",
-          "ptsauto",
-          "ptsda",
-          "mgrdaat",
           "shortname",
-          "ceid"
+          "gbg"
         ]
       }
     },
