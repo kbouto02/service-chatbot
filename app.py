@@ -255,16 +255,16 @@ def verify_token(token):
     else:
         return None
 
-# retrieve a single coverage record by CEID
-@app.get('/coverages/ceid/<string:ceid>')
+# retrieve a single coverage record by GBG
+@app.get('/coverages/gbg/<string:gbg>')
 @app.output(CoverageOutSchema)
 @app.auth_required(auth)
-def get_coverage_ceid(ceid):
-    """Coverage record by CEID
-    Retrieve a single coverage record by its CEID
+def get_coverage_gbg(gbg):
+    """Coverage record by GBG
+    Retrieve a single coverage record by its GBG
     """
-    search="%{}%".format(ceid)
-    return CoverageModel.query.filter(CoverageModel.ceid.ilike(search)).first()
+    search="%{}%".format(gbg)
+    return CoverageModel.query.filter(CoverageModel.gbg.ilike(search)).first()
 
 # retrieve a single coverage record by name
 @app.get('/coverages/name/<string:short_name>')
@@ -307,7 +307,7 @@ def get_coverages(query):
 @app.auth_required(auth)
 def create_coverage(data):
     """Insert a new coverage record
-    Insert a new coverage record with the given attributes. Its new CEID is returned.
+    Insert a new coverage record with the given attributes. Its new GBG is returned.
     """
     coverage = CoverageModel(**data)
     db.session.add(coverage)
@@ -316,14 +316,14 @@ def create_coverage(data):
 
 
 # delete a coverage record
-@app.delete('/coverages/ceid/<int:ceid>')
+@app.delete('/coverages/gbg/<int:gbg>')
 @app.output({}, 204)
 @app.auth_required(auth)
-def delete_coverage(ceid):
-    """Delete a coverage record by CEID
-    Delete a single coverage record identified by its CEID.
+def delete_coverage(gbg):
+    """Delete a coverage record by GBG
+    Delete a single coverage record identified by its GBG.
     """
-    coverage = CoverageModel.query.get_or_404(ceid)
+    coverage = CoverageModel.query.get_or_404(gbg)
     db.session.delete(coverage)
     db.session.commit()
     return ''
