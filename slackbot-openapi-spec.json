@@ -457,67 +457,160 @@
           "crosstps": {
             "type": "string"
           },
-          "crosssps": {
+          "crosstpsm": {
             "type": "string"
           },
-          "bpsz": {
+          "mgexec": {
             "type": "string"
           },
-          "bpspow": {
+          "mgexecm": {
             "type": "string"
           },
-          "bpsstor": {
+          "silablead": {
             "type": "string"
           },
-          "bpsauto": {
+          "silableadm": {
             "type": "string"
           },
-          "bpsda": {
+          "solarch": {
+            "type": "string"
+          },
+          "solarchm": {
+            "type": "string"
+          },
+          "bpsdaa": {
+            "type": "string"
+          },
+          "bpsdaam": {
             "type": "string"
           },
           "bpssec": {
             "type": "string"
           },
+          "bpssecm": {
+            "type": "string"
+          },
           "bpssus": {
             "type": "string"
           },
-          "igf": {
+          "bpssusm": {
+            "type": "string"
+          },
+          "bpsz": {
+            "type": "string"
+          },
+          "bpszm": {
+            "type": "string"
+          },
+          "bpspow": {
+            "type": "string"
+          },
+          "bpspowm": {
+            "type": "string"
+          },
+          "bpsstor": {
+            "type": "string"
+          },
+          "bpsstorm": {
+            "type": "string"
+          },
+          "bpscloud": {
+            "type": "string"
+          },
+          "bpscloudm": {
             "type": "string"
           },
           "crosspts": {
             "type": "string"
           },
+          "crossptsm": {
+            "type": "string"
+          },
           "ptsda": {
+            "type": "string"
+          },
+          "ptsdam": {
             "type": "string"
           },
           "ptsauto": {
             "type": "string"
           },
+          "ptsautom": {
+            "type": "string"
+          },
           "ptssec": {
+            "type": "string"
+          },
+          "ptssecm": {
             "type": "string"
           },
           "ptssus": {
             "type": "string"
           },
+          "ptssusm": {
+            "type": "string"
+          },
           "ptsz": {
+            "type": "string"
+          },
+          "ptszm": {
             "type": "string"
           },
           "ptspow": {
             "type": "string"
           },
+          "ptspowm": {
+            "type": "string"
+          },
           "ptsstor": {
             "type": "string"
           },
-          "ptscloudplat": {
+          "ptsstorm": {
+            "type": "string"
+          },
+          "ptscloud": {
+            "type": "string"
+          },
+          "ptscloudm": {
+            "type": "string"
+          },
+          "eladeal": {
+            "type": "string"
+          },
+          "eladealm": {
             "type": "string"
           },
           "zsw": {
             "type": "string"
           },
-          "csm": {
+          "zswm": {
             "type": "string"
           },
-          "silablead": {
+          "turboinst": {
+            "type": "string"
+          },
+          "turboinstm": {
+            "type": "string"
+          },
+          "igf": {
+            "type": "string"
+          },
+          "igfm": {
+            "type": "string"
+          },
+          "explabs": {
+            "type": "string"
+          },
+          "explabsm": {
+            "type": "string"
+          },
+          "csmsw": {
+            "type": "string"
+          },
+          "csmswm": {
+            "type": "string"
+          },
+          "csmcloud": {
             "type": "string"
           }
         }
@@ -554,32 +647,47 @@
             "minLength": 0,
             "maxLength": 255
           },
-          "crosssps": {
+          "crosstpsm": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           },
-          "bpsz": {
+          "mgexec": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           },
-          "bpspow": {
+          "mgexecm": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           },
-          "bpsstor": {
+          "silablead": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           },
-          "bpsauto": {
+          "silableadm": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           },
-          "bpsda": {
+          "solarch": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "solarchm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "bpsdaa": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "bpsdaam": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
@@ -589,12 +697,57 @@
             "minLength": 0,
             "maxLength": 255
           },
+          "bpssecm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
           "bpssus": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           },
-          "igf": {
+          "bpssusm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "bpsz": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "bpszm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "bpspow": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "bpspowm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "bpsstor": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "bpsstorm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "bpscloud": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "bpscloudm": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
@@ -604,7 +757,17 @@
             "minLength": 0,
             "maxLength": 255
           },
+          "crossptsm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
           "ptsda": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "ptsdam": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
@@ -614,7 +777,17 @@
             "minLength": 0,
             "maxLength": 255
           },
+          "ptsautom": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
           "ptssec": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "ptssecm": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
@@ -624,7 +797,17 @@
             "minLength": 0,
             "maxLength": 255
           },
+          "ptssusm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
           "ptsz": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "ptszm": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
@@ -634,12 +817,37 @@
             "minLength": 0,
             "maxLength": 255
           },
+          "ptspowm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
           "ptsstor": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           },
-          "ptscloudplat": {
+          "ptsstorm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "ptscloud": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "ptscloudm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "eladeal": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "eladealm": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
@@ -649,12 +857,52 @@
             "minLength": 0,
             "maxLength": 255
           },
-          "csm": {
+          "zswm": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
           },
-          "silablead": {
+          "turboinst": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "turboinstm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "igf": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "igfm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "explabs": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "explabsm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "csmsw": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "csmswm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "csmcloud": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
