@@ -216,7 +216,7 @@ sample_coverages=[
 # Schema for table “SERVICECOVERAGES"
 # Set default schema to "SERVICECOVERAGES"
 class CoverageModel(db.Model):
-    __tablename__ = 'COVERAGES'
+    __tablename__ = 'SERVICECOVERAGES'
     __table_args__ = TABLE_ARGS
     cid = db.Column('CID',db.Integer, primary_key=True)
     shortname = db.Column('PARTNAME',db.String(255))
