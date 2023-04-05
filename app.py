@@ -140,6 +140,8 @@ sample_coverages=[
         "ptscloudm":"Sample",
         "eladeal":"Sample",
         "eladealm":"Sample",
+        "esadeal":"Sample",
+        "esadealm":"Sample",
         "zsw":"Sample",
         "zswm":"Sample",
         "turboinst":"Sample",
@@ -197,6 +199,8 @@ sample_coverages=[
         "ptscloudm":"Demonstration",
         "eladeal":"Demonstration",
         "eladealm":"Demonstration",
+        "esadeal":"Demonstration",
+        "esadealm":"Demonstration",
         "zsw":"Demonstration",
         "zswm":"Demonstration",
         "turboinst":"Demonstration",
@@ -263,6 +267,8 @@ class CoverageModel(db.Model):
     ptscloudm = db.Column('PTSCLOUDMGR',db.String(255))
     eladeal = db.Column('ELADEAL',db.String(255))
     eladealm = db.Column('ELADEALMGR',db.String(255))
+    esadeal = db.Column('ESADEAL',db.String(255))
+    esadealm = db.Column('ESADEALMGR',db.String(255))
     zsw = db.Column('ZSW',db.String(255))
     zswm = db.Column('ZSWMGR',db.String(255))
     turboinst = db.Column('TURBOINST',db.String(255))
@@ -323,6 +329,8 @@ class CoverageOutSchema(Schema):
     ptscloudm = String()
     eladeal = String()
     eladealm = String()
+    esadeal = String()
+    esadealm = String()
     zsw = String()
     zswm = String()
     turboinst = String()
@@ -381,6 +389,8 @@ class CoverageInSchema(Schema):
     ptscloudm = String(required=True, validate=Length(0, 255))
     eladeal = String(required=True, validate=Length(0, 255))
     eladealm = String(required=True, validate=Length(0, 255))
+    esadeal = String(required=True, validate=Length(0, 255))
+    esadealm = String(required=True, validate=Length(0, 255))
     zsw = String(required=True, validate=Length(0, 255))
     zswm = String(required=True, validate=Length(0, 255))
     turboinst = String(required=True, validate=Length(0, 255))
