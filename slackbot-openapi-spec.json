@@ -580,6 +580,12 @@
           "eladealm": {
             "type": "string"
           },
+          "esadeal": {
+            "type": "string"
+          },
+          "esadealm": {
+            "type": "string"
+          },
           "zsw": {
             "type": "string"
           },
@@ -848,6 +854,16 @@
             "maxLength": 255
           },
           "eladealm": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "esadeal": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255
+          },
+          "esadealm": {
             "type": "string",
             "minLength": 0,
             "maxLength": 255
